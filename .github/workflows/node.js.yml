@@ -29,3 +29,6 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Setup Atom
+  uses: UziTech/action-setup-atom@v2.0.1
+
