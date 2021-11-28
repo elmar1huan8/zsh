@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle zsh-terminal",
+        "command": "zsh-terminal:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "zsh-terminal",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "zsh-terminal:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
