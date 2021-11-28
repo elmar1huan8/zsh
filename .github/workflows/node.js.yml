@@ -1,16 +1,17 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Setup Node.js environment
+uses: actions/setup-node@v2.4.1
+
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  my_job:
+    name: deploy to staging
 
     runs-on: ubuntu-latest
 
@@ -29,6 +30,4 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Setup Atom
-  uses: UziTech/action-setup-atom@v2.0.1
 
